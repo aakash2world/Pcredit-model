@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    /*width: 75%;*/
+    width: auto;
+}
+
+.result {
+    margin: auto;
+    width: 75%;
+    border: 1px solid #ccc;
+}
+</style>
+
+<head>
+    <title> Credit Card Model</title>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        Age:
+        <input name="Age" type="number" required>
+        <br>
+        <br> Gender:
+        <input name="Gender" type="text" required>
+        <br>
+        <br> Marital Status (at the time of application):
+        <input name="Marital Status (at the time of application)" type="text" required>
+        <br>
+        <br> No of dependents:
+        <input name="No of dependents" type="number" required>
+        <br>
+        <br> Total_Income:
+        <input name="Total_Income" type="number" required>
+        <br>
+        <br> Education:
+        <input name="Education" type="text" required>
+        <br>
+        <br> Profession:
+        <input name="Profession" type="text" required>
+        <br>
+        <br> Type of residence:
+        <input name="Type of residence" type="text" required>
+        <br>
+        <br> No of months in current residence:
+        <input name="No of months in current residence" type="number" required>
+        <br>
+        <br> No of months in current company:
+        <input name="No of months in current company" type="number" required>
+        <br>
+        <br> No of times 90 DPD or worse in last 6 months:
+        <input name="No of times 90 DPD or worse in last 6 months" type="number" required>
+        <br>
+        <br> No of times 60 DPD or worse in last 6 months:
+        <input name="No of times 60 DPD or worse in last 6 months" type="number" required>
+        <br>
+        <br> No of times 30 DPD or worse in last 6 months:
+        <input name="No of times 30 DPD or worse in last 6 months" type="number" required>
+        <br>
+        <br> No of times 90 DPD or worse in last 12 months:
+        <input name="No of times 90 DPD or worse in last 12 months" type="number" required>
+        <br>
+        <br> No of times 60 DPD or worse in last 12 months:
+        <input name="No of times 60 DPD or worse in last 12 months" type="number" required>
+        <br>
+        <br> No of times 30 DPD or worse in last 12 months:
+        <input name="No of times 30 DPD or worse in last 12 months" type="number" required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    	<br> Credit card can be issued or not:
+   		<p style="font-size:50px">{{ result }}</p>
+</div>
+
+</html>
